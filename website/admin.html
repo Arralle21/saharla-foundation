@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin – Saharla Foundation</title>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<!-- ── Login ──────────────────────────────── -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <img src="assets/logo.png" alt="Saharla Foundation" class="lc-logo"/>
+    <h2>Admin Portal</h2>
+    <p class="lc-sub">Saharla Foundation Content Management</p>
+    <form id="loginForm">
+      <div class="lfield">
+        <label><i class="fas fa-user"></i> Username</label>
+        <input type="text" id="lu" placeholder="Username" autocomplete="username" required/>
+      </div>
+      <div class="lfield">
+        <label><i class="fas fa-lock"></i> Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="lp" placeholder="Password" autocomplete="current-password" required/>
+          <button type="button" id="pwEye"><i class="fas fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="lerr" id="lerr" style="display:none"><i class="fas fa-exclamation-circle"></i> Invalid credentials.</div>
+      <button type="submit" class="lbtn">Sign In <i class="fas fa-arrow-right"></i></button>
+    </form>
+  </div>
+</div>
+
+<!-- ── Dashboard ──────────────────────────── -->
+<div class="shell" id="shell" style="display:none">
+
+  <aside class="sidebar">
+    <div class="sb-top">
+      <img src="assets/logo.png" alt="" class="sb-logo"/>
+      <div><span class="sb-title">Saharla</span><span class="sb-sub">Admin Panel</span></div>
+    </div>
+    <nav class="sb-nav">
+      <button class="sbn active" data-panel="events"><i class="fas fa-calendar-alt"></i> Events &amp; News</button>
+      <button class="sbn" data-panel="howto"><i class="fas fa-question-circle"></i> How To Use</button>
+    </nav>
+    <div class="sb-bot">
+      <a href="index.html" target="_blank" class="sb-view"><i class="fas fa-external-link-alt"></i> View Website</a>
+      <button class="sb-logout" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="panelTitle">Events &amp; News Manager</h1>
+        <span id="panelSub">Add events with photos and reports — they publish instantly to your live website</span>
+      </div>
+      <a href="index.html" target="_blank" class="tbtn"><i class="fas fa-eye"></i> View Site</a>
+    </header>
+
+    <!-- EVENTS PANEL -->
+    <section class="panel" id="panel-events">
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="sbox"><span class="sv" id="stTotal">0</span><span class="sl">Total</span></div>
+        <div class="sbox"><span class="sv" id="stEvents">0</span><span class="sl">Events</span></div>
+        <div class="sbox"><span class="sv" id="stNews">0</span><span class="sl">News</span></div>
+        <div class="sbox"><span class="sv" id="stPrograms">0</span><span class="sl">Programs</span></div>
+      </div>
+
+      <!-- Action bar -->
+      <div class="act-bar">
+        <button class="abtn primary" id="openAdd"><i class="fas fa-plus"></i> Add New Event</button>
+      </div>
+
+      <!-- Live indicator -->
+      <div class="reminder-box live-box">
+        <i class="fas fa-circle live-dot"></i>
+        <div>
+          <strong>Live Database</strong> — Changes publish instantly to your website. No file uploads needed.
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="tbl-wrap">
+        <table class="etbl">
+          <thead><tr>
+            <th>Photo</th><th>Title</th><th>Date</th><th>Type</th><th>Category</th><th>Location</th><th>Actions</th>
+          </tr></thead>
+          <tbody id="etbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- HOW-TO PANEL -->
+    <section class="panel" id="panel-howto" style="display:none">
+      <div class="howto-wrap">
+        <h3><i class="fas fa-database"></i> How Your CMS Works</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div><h4>Log in from anywhere</h4><p>Go to <strong>yourdomain.com/admin.html</strong> from any browser — phone, tablet, or computer. Log in with your admin credentials.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div><h4>Click Add New Event</h4><p>Fill in the title, date, type, location, category, and description. You can also attach a <strong>photo</strong> and a <strong>report PDF link</strong>.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div><h4>Upload a photo (optional)</h4><p>Click the photo field and select an image from your device. It uploads directly to the server — no separate FTP needed.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div><h4>Click Save</h4><p>The event is saved to the database instantly. Your live website updates in real time — donors and visitors see it immediately.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div><h4>Edit or Delete anytime</h4><p>Use the <strong>pencil</strong> icon to edit an event or the <strong>trash</strong> icon to remove it. Changes are instant.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">6</div>
+            <div><h4>First-time setup</h4><p>Run <code>setup.sql</code> once in Hostinger phpMyAdmin, then update <code>db.php</code> with your database name, username, and password from hPanel.</p></div>
+          </div>
+        </div>
+        <div class="howto-note">
+          <i class="fas fa-lightbulb"></i>
+          <p><strong>Tip:</strong> You can link to a PDF report hosted on Google Drive or Dropbox in the <em>Report URL</em> field. Donors can click to download the full report from your event card.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ADD / EDIT MODAL -->
+<div class="overlay" id="overlay" style="display:none">
+  <div class="modal modal-lg">
+    <div class="modal-hd">
+      <h3 id="modalTitle">Add New Event</h3>
+      <button class="mclose" id="mclose"><i class="fas fa-times"></i></button>
+    </div>
+    <form id="evForm" enctype="multipart/form-data">
+      <input type="hidden" id="evId"/>
+
+      <!-- Photo upload -->
+      <div class="mfield">
+        <label><i class="fas fa-image"></i> Event Photo <span class="opt">(optional)</span></label>
+        <div class="photo-upload-area" id="photoArea">
+          <img id="photoPreview" src="" alt="" style="display:none"/>
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Click to upload photo</span>
+            <small>JPG, PNG, WEBP · Max 5MB</small>
+          </div>
+          <input type="file" id="evPhoto" accept="image/*" style="display:none"/>
+          <button type="button" class="photo-clear" id="photoClear" style="display:none"><i class="fas fa-times"></i></button>
+        </div>
+        <input type="hidden" id="evPhotoUrl"/>
+      </div>
+
+      <div class="mfield">
+        <label>Title <span class="req">*</span></label>
+        <input type="text" id="evTitle" placeholder="Event or news title" required/>
+      </div>
+
+      <div class="mrow">
+        <div class="mfield">
+          <label>Date <span class="req">*</span></label>
+          <input type="date" id="evDate" required/>
+        </div>
+        <div class="mfield">
+          <label>Type <span class="req">*</span></label>
+          <select id="evType">
+            <option value="event">Event</option>
+            <option value="news">News</option>
+            <option value="program">Program</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mrow">
+        <div class="mfield">
+          <label>Category</label>
+          <input type="text" id="evCat" placeholder="e.g. Education, Healthcare…"/>
+        </div>
+        <div class="mfield">
+          <label>Location</label>
+          <input type="text" id="evLoc" placeholder="e.g. Mogadishu, Somalia"/>
+        </div>
+      </div>
+
+      <div class="mfield">
+        <label>Description <span class="req">*</span></label>
+        <textarea id="evDesc" rows="4" placeholder="Brief description of the event or news…" required></textarea>
+      </div>
+
+      <div class="mfield">
+        <label><i class="fas fa-file-pdf"></i> Report / Document URL <span class="opt">(optional)</span></label>
+        <input type="url" id="evReport" placeholder="https://drive.google.com/… or PDF link"/>
+        <small class="field-hint">Paste a Google Drive, Dropbox, or any public link to the event report or document.</small>
+      </div>
+
+      <div class="mfoot">
+        <button type="button" class="abtn secondary" id="mcancel">Cancel</button>
+        <button type="submit" class="abtn primary" id="saveBtn"><i class="fas fa-save"></i> Save &amp; Publish</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM -->
+<div class="overlay" id="delOverlay" style="display:none">
+  <div class="modal confirm-modal">
+    <div class="confirm-icon"><i class="fas fa-trash-alt"></i></div>
+    <h3>Delete this item?</h3>
+    <p id="delTitle"></p>
+    <div class="mfoot">
+      <button class="abtn secondary" id="delCancel">Cancel</button>
+      <button class="abtn danger" id="delConfirm"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Saharla Foundation – Empowering communities in Puntland's Sool, Sanaag & Cayn through education, healthcare, gender equality and sustainable development."/>
+  <title>Saharla Foundation – Helping Hands, Changing Lives</title>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ░░░ PRELOADER ░░░ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <img src="assets/logo.png" alt="Saharla Foundation" class="preloader-logo"/>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    <span class="preloader-text">Loading…</span>
+  </div>
+</div>
+
+<!-- ░░░ NAVBAR ░░░ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <img src="assets/logo.png" alt="Saharla Foundation"/>
+      <span class="nav-brand">Saharla <em>Foundation</em></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     class="nav-link">Home</a></li>
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#programs" class="nav-link">Programs</a></li>
+      <li><a href="#impact"   class="nav-link">Impact</a></li>
+      <li><a href="#team"     class="nav-link">Team</a></li>
+      <li><a href="#events"   class="nav-link">Events</a></li>
+      <li><a href="#contact"  class="nav-link">Contact</a></li>
+      <li><a href="admin.html" class="nav-admin"><i class="fas fa-lock"></i> Admin</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ░░░ HERO ░░░ -->
+<section class="hero" id="home">
+  <!-- Animated gradient orbs -->
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+  <!-- Particle canvas -->
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow" data-aos="fade-down" data-aos-delay="200">
+      <span class="eyebrow-dot"></span>
+      Est. 2020 &nbsp;·&nbsp; Mogadishu, Somalia
+      <span class="eyebrow-dot"></span>
+    </div>
+
+    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="350">
+      <span class="ht-line1">Saharla</span>
+      <span class="ht-line2">Foundation</span>
+    </h1>
+
+    <p class="hero-tagline" data-aos="fade-up" data-aos-delay="500">
+      <span class="tag-dash"></span>
+      <span id="typedText">Helping Hands, Changing Lives</span>
+      <span class="tag-dash"></span>
+    </p>
+
+    <p class="hero-desc" data-aos="fade-up" data-aos-delay="650">
+      Empowering communities in Puntland's <strong>Sool, Sanaag &amp; Cayn</strong> through
+      education, healthcare, gender equality and sustainable development.
+    </p>
+
+    <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+      <a href="#about"  class="btn btn-primary"><i class="fas fa-compass"></i> Discover Our Mission</a>
+      <a href="#events" class="btn btn-glass"><i class="fas fa-calendar-alt"></i> See Events</a>
+    </div>
+  </div>
+
+  <!-- Floating stats -->
+  <div class="hero-stats" data-aos="fade-up" data-aos-delay="900">
+    <div class="hstat">
+      <span class="hstat-num" data-target="400">0</span><span class="hstat-plus">+</span>
+      <span class="hstat-lbl">Beneficiaries</span>
+    </div>
+    <div class="hstat-sep"></div>
+    <div class="hstat">
+      <span class="hstat-num" data-target="7">0</span>
+      <span class="hstat-lbl">Programs</span>
+    </div>
+    <div class="hstat-sep"></div>
+    <div class="hstat">
+      <span class="hstat-num" data-target="3">0</span>
+      <span class="hstat-lbl">Regions</span>
+    </div>
+    <div class="hstat-sep"></div>
+    <div class="hstat">
+      <span class="hstat-num" data-target="12">0</span>
+      <span class="hstat-lbl">Team Members</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ░░░ MARQUEE STRIP ░░░ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Education</span><span class="mx">✦</span>
+    <span>Healthcare</span><span class="mx">✦</span>
+    <span>Women Empowerment</span><span class="mx">✦</span>
+    <span>Youth Development</span><span class="mx">✦</span>
+    <span>Conflict Resolution</span><span class="mx">✦</span>
+    <span>Climate Resilience</span><span class="mx">✦</span>
+    <span>Agriculture</span><span class="mx">✦</span>
+    <span>Peacebuilding</span><span class="mx">✦</span>
+    <!-- duplicate for seamless loop -->
+    <span>Education</span><span class="mx">✦</span>
+    <span>Healthcare</span><span class="mx">✦</span>
+    <span>Women Empowerment</span><span class="mx">✦</span>
+    <span>Youth Development</span><span class="mx">✦</span>
+    <span>Conflict Resolution</span><span class="mx">✦</span>
+    <span>Climate Resilience</span><span class="mx">✦</span>
+    <span>Agriculture</span><span class="mx">✦</span>
+    <span>Peacebuilding</span><span class="mx">✦</span>
+  </div>
+</div>
+
+<!-- ░░░ FEATURED EVENTS STRIP ░░░ -->
+<section class="featured-events" id="featuredEvents">
+  <div class="container">
+    <div class="fe-header">
+      <div>
+        <span class="fe-tag"><i class="fas fa-circle fe-live"></i> Latest Updates</span>
+        <h2>Recent Events &amp; News</h2>
+      </div>
+      <a href="#events" class="fe-viewall">View All <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="fe-strip" id="featuredStrip">
+      <!-- Populated by app.js from database -->
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ ABOUT ░░░ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">Who We Are</span>
+      <h2>About Saharla Foundation</h2>
+      <div class="sbar"></div>
+    </div>
+
+    <div class="about-grid">
+      <!-- Text -->
+      <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+        <p class="lead">The Saharla Foundation is a humanitarian and development organisation dedicated to fostering sustainable change in Somalia's conflict-affected regions of <strong>Sool, Sanaag, and Cayn</strong>.</p>
+        <p>We enhance education, healthcare, livelihoods, and gender equality through targeted initiatives developed with local communities, government agencies, and international organisations.</p>
+        <p>Through our comprehensive approach, we build resilient communities capable of overcoming the challenges of conflict and climate change — working towards a more prosperous and peaceful future.</p>
+        <div class="about-quote" data-aos="fade-up" data-aos-delay="200">
+          <div class="aq-mark">"</div>
+          <blockquote>Together, we're contributing to Somalia's peace and prosperity through the transformative power of educated, empowered women.</blockquote>
+          <cite>— Saynab Shire, Executive Director</cite>
+        </div>
+      </div>
+
+      <!-- Vision / Mission cards -->
+      <div class="about-cards" data-aos="fade-left" data-aos-delay="150">
+        <div class="vm-card vm-vision">
+          <div class="vm-icon"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>A prosperous and peaceful Puntland where all individuals, regardless of gender or clan, realise their full potential through equitable access to education, healthcare, and economic opportunities.</p>
+        </div>
+        <div class="vm-card vm-mission">
+          <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To empower vulnerable communities by providing equitable access to education, healthcare, livelihood resources, and gender equality initiatives — aligned with the UN Sustainable Development Goals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="section-sub" data-aos="fade-up"><h3>Core Values</h3></div>
+    <div class="values-grid">
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="0">  <div class="val-icon"><i class="fas fa-fist-raised"></i></div><h4>Empowerment</h4><p>Enabling individuals to take charge of their development journey.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="60"> <div class="val-icon"><i class="fas fa-users"></i></div><h4>Inclusivity</h4><p>Accessible to all, regardless of gender, age, or clan.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="120"><div class="val-icon"><i class="fas fa-leaf"></i></div><h4>Sustainability</h4><p>Long-term solutions that foster self-reliance and resilience.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="180"><div class="val-icon"><i class="fas fa-shield-alt"></i></div><h4>Integrity</h4><p>Highest standards of transparency and accountability.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="240"><div class="val-icon"><i class="fas fa-handshake"></i></div><h4>Collaboration</h4><p>Working with communities and partners to maximise impact.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="300"><div class="val-icon"><i class="fas fa-venus-mars"></i></div><h4>Gender Equality</h4><p>Equal rights and opportunities for women and girls.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="360"><div class="val-icon"><i class="fas fa-dove"></i></div><h4>Peace &amp; Dialogue</h4><p>Fostering reconciliation and social cohesion.</p></div>
+      <div class="val-card" data-aos="zoom-in" data-aos-delay="420"><div class="val-icon"><i class="fas fa-globe-africa"></i></div><h4>Environment</h4><p>Climate-resilient practices protecting communities.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ PROGRAMS ░░░ -->
+<section class="section section-alt" id="programs">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">What We Do</span>
+      <h2>Programs &amp; Initiatives</h2>
+      <div class="sbar"></div>
+      <p class="section-intro">Seven strategic programmes addressing the most critical needs in Sool, Sanaag and Cayn.</p>
+    </div>
+
+    <div class="tabs-wrap" data-aos="fade-up" data-aos-delay="100">
+      <div class="tab-nav">
+        <button class="tnav active" data-tab="education"><i class="fas fa-graduation-cap"></i><span>Education</span></button>
+        <button class="tnav" data-tab="health"><i class="fas fa-heartbeat"></i><span>Healthcare</span></button>
+        <button class="tnav" data-tab="youth"><i class="fas fa-running"></i><span>Youth</span></button>
+        <button class="tnav" data-tab="women"><i class="fas fa-female"></i><span>Women</span></button>
+        <button class="tnav" data-tab="peace"><i class="fas fa-dove"></i><span>Peace</span></button>
+        <button class="tnav" data-tab="agri"><i class="fas fa-seedling"></i><span>Agriculture</span></button>
+        <button class="tnav" data-tab="climate"><i class="fas fa-cloud-sun"></i><span>Climate</span></button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tpanel active" id="tp-education">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="tpanel-body">
+              <h3>Educational Programs</h3>
+              <p>Constructing and renovating schools with emphasis on girls' education and displaced communities. Providing teacher training, adult literacy, scholarships, and vocational training centres for economic recovery.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> School construction &amp; renovation</li>
+                <li><i class="fas fa-check-circle"></i> Girls' education prioritisation</li>
+                <li><i class="fas fa-check-circle"></i> Teacher training programmes</li>
+                <li><i class="fas fa-check-circle"></i> Adult literacy initiatives</li>
+                <li><i class="fas fa-check-circle"></i> Vocational training centres</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tpanel" id="tp-health">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="tpanel-body">
+              <h3>Healthcare Initiative</h3>
+              <p>Supporting healthcare facility construction and rehabilitation. Training and deploying healthcare workers, including conflict-related specialists. Implementing disease prevention and emergency response programmes.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> Healthcare facility rehabilitation</li>
+                <li><i class="fas fa-check-circle"></i> Medical staff training &amp; deployment</li>
+                <li><i class="fas fa-check-circle"></i> Disease prevention programmes</li>
+                <li><i class="fas fa-check-circle"></i> Emergency response capacity</li>
+                <li><i class="fas fa-check-circle"></i> Mental health &amp; trauma care</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tpanel" id="tp-youth">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-running"></i></div>
+            <div class="tpanel-body">
+              <h3>Youth Development</h3>
+              <p>Vocational training and apprenticeships to enhance youth employability. Entrepreneurship support for young people and SMEs. Sports, technology and life skills programmes building confident future leaders.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> Vocational training &amp; apprenticeships</li>
+                <li><i class="fas fa-check-circle"></i> Entrepreneurship support</li>
+                <li><i class="fas fa-check-circle"></i> Sports &amp; technology programmes</li>
+                <li><i class="fas fa-check-circle"></i> Life skills education</li>
+                <li><i class="fas fa-check-circle"></i> Food security initiatives</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tpanel" id="tp-women">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-female"></i></div>
+            <div class="tpanel-body">
+              <h3>Women Empowerment</h3>
+              <p>GBV prevention and response initiatives with comprehensive support for survivors. Promoting women's economic empowerment through skills training and finance access, and advocating for policy change.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> GBV prevention &amp; response</li>
+                <li><i class="fas fa-check-circle"></i> Survivor support services</li>
+                <li><i class="fas fa-check-circle"></i> Economic empowerment training</li>
+                <li><i class="fas fa-check-circle"></i> Access to microfinance</li>
+                <li><i class="fas fa-check-circle"></i> Policy advocacy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tpanel" id="tp-peace">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-dove"></i></div>
+            <div class="tpanel-body">
+              <h3>Conflict Resolution &amp; Peacebuilding</h3>
+              <p>Facilitating dialogue and mediation among different clans and stakeholders. Conflict resolution training for community leaders and organisations. Supporting human rights protection and access to justice.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> Inter-clan dialogue &amp; mediation</li>
+                <li><i class="fas fa-check-circle"></i> Community peacebuilding</li>
+                <li><i class="fas fa-check-circle"></i> Conflict resolution training</li>
+                <li><i class="fas fa-check-circle"></i> Human rights protection</li>
+                <li><i class="fas fa-check-circle"></i> Access to justice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tpanel" id="tp-agri">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-seedling"></i></div>
+            <div class="tpanel-body">
+              <h3>Agriculture &amp; Food Security</h3>
+              <p>Supporting sustainable crop production and livestock development, facilitating access to agricultural inputs for small-scale farmers. Strengthening cooperatives and water resource management.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> Sustainable crop production</li>
+                <li><i class="fas fa-check-circle"></i> Livestock development</li>
+                <li><i class="fas fa-check-circle"></i> Water resource management</li>
+                <li><i class="fas fa-check-circle"></i> Agricultural cooperative support</li>
+                <li><i class="fas fa-check-circle"></i> Food security initiatives</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tpanel" id="tp-climate">
+          <div class="tpanel-inner">
+            <div class="tpanel-icon"><i class="fas fa-cloud-sun"></i></div>
+            <div class="tpanel-body">
+              <h3>Climate Change &amp; Environmental Resilience</h3>
+              <p>Climate-smart agriculture, reforestation campaigns and water harvesting infrastructure to help communities adapt. Renewable energy solutions and disaster risk reduction plans. Collaborating with UNEP and FAO.</p>
+              <ul class="prog-list">
+                <li><i class="fas fa-check-circle"></i> Climate-smart agriculture</li>
+                <li><i class="fas fa-check-circle"></i> Reforestation &amp; afforestation</li>
+                <li><i class="fas fa-check-circle"></i> Water harvesting infrastructure</li>
+                <li><i class="fas fa-check-circle"></i> Disaster risk reduction</li>
+                <li><i class="fas fa-check-circle"></i> Solar &amp; renewable energy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ IMPACT ░░░ -->
+<section class="section impact-section" id="impact">
+  <div class="impact-bg"></div>
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag light">Our Reach</span>
+      <h2 class="light">Impact &amp; Achievements</h2>
+      <div class="sbar light"></div>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card" data-aos="fade-up" data-aos-delay="0">  <div class="ic-icon"><i class="fas fa-book-open"></i></div><h4>Education</h4><p>Needs assessments and targeted teacher training in conflict-affected schools.</p></div>
+      <div class="impact-card" data-aos="fade-up" data-aos-delay="80"> <div class="ic-icon"><i class="fas fa-stethoscope"></i></div><h4>Healthcare</h4><p>Healthcare worker training focusing on trauma, mental health and conflict-related care.</p></div>
+      <div class="impact-card" data-aos="fade-up" data-aos-delay="160"><div class="ic-icon"><i class="fas fa-briefcase"></i></div><h4>Vocational</h4><p>Vocational training for youth improving employability and entrepreneurship skills.</p></div>
+      <div class="impact-card" data-aos="fade-up" data-aos-delay="240"><div class="ic-icon"><i class="fas fa-search"></i></div><h4>GBV Research</h4><p>Comprehensive GBV prevalence and psychological trauma assessment across SSC regions.</p></div>
+      <div class="impact-card" data-aos="fade-up" data-aos-delay="320"><div class="ic-icon"><i class="fas fa-school"></i></div><h4>Schools</h4><p>School construction projects increasing quality education access for displaced children.</p></div>
+      <div class="impact-card" data-aos="fade-up" data-aos-delay="400"><div class="ic-icon"><i class="fas fa-tree"></i></div><h4>Climate</h4><p>Tree-planting drives, water harvesting and climate-smart agriculture training.</p></div>
+    </div>
+    <div class="sdg-strip" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-globe"></i>
+      <p>Our work aligns with the <strong>UN Sustainable Development Goals</strong> — combining immediate action with long-term planning for lasting impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ EXECUTIVE BOARD ░░░ -->
+<section class="section" id="board">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">Leadership</span>
+      <h2>Executive Board</h2>
+      <div class="sbar"></div>
+      <p class="section-intro">Our Board provides strategic guidance ensuring the Foundation's effective operation and alignment with its mission.</p>
+    </div>
+    <div class="board-grid">
+      <div class="board-card" data-aos="flip-left" data-aos-delay="0">
+        <div class="board-photo-ring">
+          <img src="assets/laki.jpg" alt="Laki Hassan"/>
+        </div>
+        <h4>Laki Hassan</h4>
+        <span class="board-role">Chairperson</span>
+        <p>Leading the Foundation's strategic direction with a commitment to sustainable development and community empowerment.</p>
+        <div class="board-socials"><div class="bsoc"><i class="fas fa-briefcase"></i></div></div>
+      </div>
+      <div class="board-card board-featured" data-aos="flip-left" data-aos-delay="120">
+        <div class="board-photo-ring">
+          <img src="assets/saynab.jpg" alt="Saynab Shire"/>
+        </div>
+        <h4>Saynab Shire</h4>
+        <span class="board-role">Chief Executive Officer</span>
+        <p>Extensive experience managing humanitarian and peacebuilding initiatives in conflict-affected regions of Puntland.</p>
+        <div class="board-socials"><div class="bsoc"><i class="fas fa-briefcase"></i></div></div>
+      </div>
+      <div class="board-card" data-aos="flip-left" data-aos-delay="240">
+        <div class="board-photo-ring">
+          <img src="assets/faarax.jpg" alt="Faarax Cabdiraxmaan Jaamac" onerror="this.src='assets/cover.png'"/>
+        </div>
+        <h4>Faarax Cabdiraxmaan Jaamac</h4>
+        <span class="board-role">Board Member</span>
+        <p>Contributing expertise in organisational development, governance, and strategic planning across the Foundation.</p>
+        <div class="board-socials"><div class="bsoc"><i class="fas fa-briefcase"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ TEAM ░░░ -->
+<section class="section section-alt" id="team">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">The People</span>
+      <h2>Our Team</h2>
+      <div class="sbar"></div>
+    </div>
+
+    <!-- CEO -->
+    <div class="org-level" data-aos="fade-up">
+      <div class="team-card team-ceo">
+        <div class="tc-photo"><img src="assets/saynab.jpg" alt="Saynab Shire"/></div>
+        <div class="tc-info"><h4>Saynab Shire</h4><span>Chief Executive Officer</span></div>
+      </div>
+    </div>
+    <div class="org-line"></div>
+
+    <!-- COO / CFO -->
+    <div class="org-level" data-aos="fade-up" data-aos-delay="80">
+      <div class="team-card">
+        <div class="tc-photo"><img src="assets/abdirahman.jpg" alt="Abdirahman Suleiman Ismail"/></div>
+        <div class="tc-info"><h4>Abdirahman Suleiman Ismail</h4><span>Chief Operation Officer</span></div>
+      </div>
+      <div class="team-card">
+        <div class="tc-photo"><img src="assets/arralle.png" alt="Abdullahi Mohamed Jibril"/></div>
+        <div class="tc-info"><h4>Abdullahi Mohamed Jibril</h4><span>Chief Finance Officer</span></div>
+      </div>
+    </div>
+    <div class="org-line"></div>
+
+    <!-- Directors -->
+    <div class="org-level three" data-aos="fade-up" data-aos-delay="160">
+      <div class="team-card">
+        <div class="tc-photo"><img src="assets/amaal.jpg" alt="Amal Shire Jaamac"/></div>
+        <div class="tc-info"><h4>Amal Shire Jaamac</h4><span>Director of Education</span></div>
+      </div>
+      <div class="team-card">
+        <div class="tc-photo"><img src="assets/abdullahi.jpg" alt="Abdullahi Salah"/></div>
+        <div class="tc-info"><h4>Abdullahi Salah</h4><span>Director, Youth &amp; Economic Development</span></div>
+      </div>
+      <div class="team-card">
+        <div class="tc-photo"><img src="assets/huda.jpg" alt="Huda Ali Mahamud"/></div>
+        <div class="tc-info"><h4>Huda Ali Mahamud</h4><span>Director, Gender &amp; Women Empowerment</span></div>
+      </div>
+    </div>
+    <div class="org-line"></div>
+
+    <!-- Coordinator -->
+    <div class="org-level" data-aos="fade-up" data-aos-delay="240">
+      <div class="team-card">
+        <div class="tc-photo"><img src="assets/maryam.jpg" alt="Maryam Bashe Cali"/></div>
+        <div class="tc-info"><h4>Maryam Bashe Cali</h4><span>Health Coordinator</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ EVENTS ░░░ -->
+<section class="section" id="events">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">Stay Updated</span>
+      <h2>Events &amp; News</h2>
+      <div class="sbar"></div>
+      <p class="section-intro">Follow our latest activities, community events, and programme updates. Updated regularly for our donors and partners.</p>
+    </div>
+
+    <div class="events-filter" data-aos="fade-up" data-aos-delay="100">
+      <button class="efbtn active" data-filter="all">All</button>
+      <button class="efbtn" data-filter="event">Events</button>
+      <button class="efbtn" data-filter="news">News</button>
+      <button class="efbtn" data-filter="program">Programs</button>
+    </div>
+
+    <div class="events-grid" id="eventsGrid"></div>
+    <div class="events-empty" id="eventsEmpty" style="display:none">
+      <i class="fas fa-calendar-times"></i><p>No items found.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ PARTNERS ░░░ -->
+<section class="section section-alt" id="partners">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">Collaboration</span>
+      <h2>Partnerships &amp; Collaborations</h2>
+      <div class="sbar"></div>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="0">  <div class="pc-icon"><i class="fas fa-users"></i></div><h4>Local Communities</h4><p>Working with elders and clan leaders to ensure programmes are culturally appropriate.</p></div>
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="80"> <div class="pc-icon"><i class="fas fa-landmark"></i></div><h4>Government Agencies</h4><p>Collaborating with ministries and local authorities to align with development priorities.</p></div>
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="160"><div class="pc-icon"><i class="fas fa-globe"></i></div><h4>UN &amp; INGOs</h4><p>Partnering with UN agencies and international NGOs to leverage expertise and resources.</p></div>
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="240"><div class="pc-icon"><i class="fas fa-building"></i></div><h4>Private Sector</h4><p>Engaging businesses to provide technical support, funding, and employment opportunities.</p></div>
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="320"><div class="pc-icon"><i class="fas fa-university"></i></div><h4>Academic Institutions</h4><p>Collaborating with universities and research centres for evidence-based programmes.</p></div>
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="400"><div class="pc-icon"><i class="fas fa-leaf"></i></div><h4>Environmental Partners</h4><p>Working with UNEP, FAO and climate institutions on climate adaptation programmes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ CONTACT ░░░ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="stag">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <div class="sbar"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+        <div class="ci-item"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Head Office</h4><p>Mogadishu, Somalia</p></div></div>
+        <div class="ci-item"><div class="ci-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone</h4><p>+252 611 135 566 (Somalia)</p><p>+254 704 279 014 (Kenya)</p><p>+254 114 516 443 (Kenya)</p></div></div>
+        <div class="ci-item"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:saharlafoundation@gmail.com">saharlafoundation@gmail.com</a></p></div></div>
+        <div class="contact-socials">
+          <a href="#" class="csoc csoc-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="csoc csoc-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="csoc csoc-tw" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="100">
+        <div class="form-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="Your first name" required/></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Your last name" required/></div>
+        </div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" required/></div>
+        <div class="fg">
+          <label>Subject</label>
+          <select>
+            <option value="">Select a subject…</option>
+            <option>Partnership Inquiry</option>
+            <option>Donation &amp; Funding</option>
+            <option>Volunteer Opportunities</option>
+            <option>Media &amp; Press</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message</label><textarea rows="5" placeholder="How can we help…" required></textarea></div>
+        <button type="submit" class="btn btn-primary full">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div class="form-ok" id="formOk" style="display:none">
+          <i class="fas fa-check-circle"></i> Thank you! We'll be in touch soon.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-waves">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#1a0800"/></svg>
+  </div>
+  <div class="footer-body">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="fg-brand">
+          <img src="assets/logo.png" alt="Saharla Foundation" class="footer-logo"/>
+          <p>Helping Hands, Changing Lives.<br/>Empowering communities in Somalia's most vulnerable regions since 2020.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="fg-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#events">Events</a></li>
+          </ul>
+        </div>
+        <div class="fg-links">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="#programs">Education</a></li>
+            <li><a href="#programs">Healthcare</a></li>
+            <li><a href="#programs">Women Empowerment</a></li>
+            <li><a href="#programs">Youth Development</a></li>
+            <li><a href="#programs">Climate Resilience</a></li>
+          </ul>
+        </div>
+        <div class="fg-contact">
+          <h5>Contact</h5>
+          <p><i class="fas fa-map-marker-alt"></i> Mogadishu, Somalia</p>
+          <p><i class="fas fa-envelope"></i> saharlafoundation@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +252 611 135 566</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="yr"></span> Saharla Foundation. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:#c85a00"></i> for the communities of Sool, Sanaag &amp; Cayn</p>
+      <p class="dev-credit">
+        Developed &amp; Designed by
+        <a href="https://aglooltech.com/" target="_blank" rel="noopener noreferrer" class="dev-link">
+          <i class="fas fa-code"></i> Aglool Tech
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="app.js"></script>
+</body>
+</html>
