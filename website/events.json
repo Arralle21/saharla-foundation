@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "GBV Awareness Training Workshop",
+    "description": "A 20-day workshop providing GBV awareness training to community leaders and health workers across Sool region.",
+    "date": "2024-03-15",
+    "location": "Lasanod, Sool Region",
+    "type": "event",
+    "category": "Women Empowerment"
+  },
+  {
+    "id": 2,
+    "title": "Teacher Training Program – Sanaag Schools",
+    "description": "Targeted training for teachers in conflict-affected schools to enhance instruction quality and support displaced students.",
+    "date": "2024-04-08",
+    "location": "Erigavo, Sanaag",
+    "type": "program",
+    "category": "Education"
+  },
+  {
+    "id": 3,
+    "title": "GBV Research Publication Released",
+    "description": "Saharla Foundation releases findings from its comprehensive GBV Prevalence, Vulnerability, and Psychological Trauma Assessment across SSC regions.",
+    "date": "2024-04-20",
+    "location": "Mogadishu, Somalia",
+    "type": "news",
+    "category": "Research"
+  },
+  {
+    "id": 4,
+    "title": "Youth Vocational Training Graduation",
+    "description": "Graduation ceremony for 60 youth participants who completed vocational training in carpentry, tailoring, and mobile phone repair.",
+    "date": "2024-05-12",
+    "location": "Cayn Region",
+    "type": "event",
+    "category": "Youth Development"
+  },
+  {
+    "id": 5,
+    "title": "Community Tree-Planting Drive",
+    "description": "Community-wide reforestation initiative targeting drought-affected areas, with over 500 trees planted by youth volunteers and school children.",
+    "date": "2024-06-03",
+    "location": "Sool & Sanaag",
+    "type": "program",
+    "category": "Climate Resilience"
+  },
+  {
+    "id": 6,
+    "title": "Women Empowerment Research Phase 2 Launched",
+    "description": "Saharla Foundation launches Phase 2 study: Empowering Women and Girls in Conflict-Affected Areas: Education After War across SSC regions.",
+    "date": "2024-06-22",
+    "location": "SSC Regions",
+    "type": "news",
+    "category": "Research"
+  }
+]

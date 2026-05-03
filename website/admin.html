@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin – Saharla Foundation</title>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<!-- ── Login ──────────────────────────────── -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <img src="assets/logo.png" alt="Saharla Foundation" class="lc-logo"/>
+    <h2>Admin Portal</h2>
+    <p class="lc-sub">Saharla Foundation Content Management</p>
+    <form id="loginForm">
+      <div class="lfield">
+        <label><i class="fas fa-user"></i> Username</label>
+        <input type="text" id="lu" placeholder="Username" autocomplete="username" required/>
+      </div>
+      <div class="lfield">
+        <label><i class="fas fa-lock"></i> Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="lp" placeholder="Password" autocomplete="current-password" required/>
+          <button type="button" id="pwEye"><i class="fas fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="lerr" id="lerr" style="display:none"><i class="fas fa-exclamation-circle"></i> Invalid credentials.</div>
+      <button type="submit" class="lbtn">Sign In <i class="fas fa-arrow-right"></i></button>
+    </form>
+    <p class="lhint">Default: <strong>admin</strong> / <strong>saharla2024</strong></p>
+  </div>
+</div>
+
+<!-- ── Dashboard ──────────────────────────── -->
+<div class="shell" id="shell" style="display:none">
+
+  <aside class="sidebar">
+    <div class="sb-top">
+      <img src="assets/logo.png" alt="" class="sb-logo"/>
+      <div><span class="sb-title">Saharla</span><span class="sb-sub">Admin Panel</span></div>
+    </div>
+    <nav class="sb-nav">
+      <button class="sbn active" data-panel="events"><i class="fas fa-calendar-alt"></i> Events & News</button>
+      <button class="sbn" data-panel="howto"><i class="fas fa-question-circle"></i> How To Upload</button>
+    </nav>
+    <div class="sb-bot">
+      <a href="index.html" target="_blank" class="sb-view"><i class="fas fa-external-link-alt"></i> View Website</a>
+      <button class="sb-logout" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="panelTitle">Events &amp; News Manager</h1>
+        <span id="panelSub">Add or remove events — then download and upload events.json to Hostinger</span>
+      </div>
+      <a href="index.html" target="_blank" class="tbtn"><i class="fas fa-eye"></i> View Site</a>
+    </header>
+
+    <!-- EVENTS PANEL -->
+    <section class="panel" id="panel-events">
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="sbox"><span class="sv" id="stTotal">0</span><span class="sl">Total</span></div>
+        <div class="sbox"><span class="sv" id="stEvents">0</span><span class="sl">Events</span></div>
+        <div class="sbox"><span class="sv" id="stNews">0</span><span class="sl">News</span></div>
+        <div class="sbox"><span class="sv" id="stPrograms">0</span><span class="sl">Programs</span></div>
+      </div>
+
+      <!-- Action bar -->
+      <div class="act-bar">
+        <button class="abtn primary" id="openAdd"><i class="fas fa-plus"></i> Add New</button>
+        <button class="abtn success" id="downloadJson"><i class="fas fa-download"></i> Download events.json</button>
+        <button class="abtn danger"  id="resetData"><i class="fas fa-undo"></i> Reset Defaults</button>
+      </div>
+
+      <!-- Upload reminder -->
+      <div class="reminder-box">
+        <i class="fas fa-info-circle"></i>
+        <div>
+          <strong>How to publish changes:</strong>
+          After adding or editing events, click <em>Download events.json</em> above,
+          then upload that file to your Hostinger File Manager at <code>public_html/events.json</code>.
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="tbl-wrap">
+        <table class="etbl">
+          <thead><tr>
+            <th>Title</th><th>Date</th><th>Type</th><th>Category</th><th>Location</th><th>Actions</th>
+          </tr></thead>
+          <tbody id="etbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- HOW-TO PANEL -->
+    <section class="panel" id="panel-howto" style="display:none">
+      <div class="howto-wrap">
+        <h3><i class="fas fa-upload"></i> How to Add Events to Your Live Website</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div><h4>Add your event here</h4><p>Click <strong>Events &amp; News</strong> in the sidebar, then <strong>Add New</strong>. Fill in the title, date, type, and description.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div><h4>Download events.json</h4><p>Click the green <strong>Download events.json</strong> button. This saves a file to your computer with all your events.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div><h4>Open Hostinger File Manager</h4><p>Log in to <strong>hpanel.hostinger.com</strong> → Hosting → Manage → File Manager.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div><h4>Navigate to public_html</h4><p>Open the <strong>public_html</strong> folder. This is where your website files live.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div><h4>Upload &amp; Replace</h4><p>Click <strong>Upload</strong>, select the <code>events.json</code> you downloaded. If asked to replace, click Yes.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">6</div>
+            <div><h4>Done! ✓</h4><p>Refresh your website. The new events appear immediately on the public Events section — visible to all donors and visitors.</p></div>
+          </div>
+        </div>
+        <div class="howto-note">
+          <i class="fas fa-lightbulb"></i>
+          <p><strong>Tip:</strong> The <code>events.json</code> file in your admin panel is just a local editor. The live website always reads from the file on Hostinger. Always upload after making changes.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ADD / EDIT MODAL -->
+<div class="overlay" id="overlay" style="display:none">
+  <div class="modal">
+    <div class="modal-hd">
+      <h3 id="modalTitle">Add New Event</h3>
+      <button class="mclose" id="mclose"><i class="fas fa-times"></i></button>
+    </div>
+    <form id="evForm">
+      <input type="hidden" id="evId"/>
+      <div class="mfield">
+        <label>Title <span class="req">*</span></label>
+        <input type="text" id="evTitle" placeholder="Event or news title" required/>
+      </div>
+      <div class="mrow">
+        <div class="mfield">
+          <label>Date <span class="req">*</span></label>
+          <input type="date" id="evDate" required/>
+        </div>
+        <div class="mfield">
+          <label>Type <span class="req">*</span></label>
+          <select id="evType">
+            <option value="event">Event</option>
+            <option value="news">News</option>
+            <option value="program">Program</option>
+          </select>
+        </div>
+      </div>
+      <div class="mrow">
+        <div class="mfield">
+          <label>Category</label>
+          <input type="text" id="evCat" placeholder="e.g. Education, Healthcare…"/>
+        </div>
+        <div class="mfield">
+          <label>Location</label>
+          <input type="text" id="evLoc" placeholder="e.g. Mogadishu, Somalia"/>
+        </div>
+      </div>
+      <div class="mfield">
+        <label>Description <span class="req">*</span></label>
+        <textarea id="evDesc" rows="4" placeholder="Brief description…" required></textarea>
+      </div>
+      <div class="mfoot">
+        <button type="button" class="abtn secondary" id="mcancel">Cancel</button>
+        <button type="submit" class="abtn primary"><i class="fas fa-save"></i> Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM -->
+<div class="overlay" id="delOverlay" style="display:none">
+  <div class="modal confirm-modal">
+    <div class="confirm-icon"><i class="fas fa-trash-alt"></i></div>
+    <h3>Delete this item?</h3>
+    <p id="delTitle"></p>
+    <div class="mfoot">
+      <button class="abtn secondary" id="delCancel">Cancel</button>
+      <button class="abtn danger" id="delConfirm"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="admin.js"></script>
+</body>
+</html>
